@@ -1,5 +1,4 @@
-
-myArray = [2, 3, 6, 7, 10, 1];  
+function biggestIndex(myArray){
 let biggest = 0;
 for (let index = 0; index < myArray.length; index += 1) {
   if (myArray[index] > biggest){
@@ -7,6 +6,8 @@ for (let index = 0; index < myArray.length; index += 1) {
   }
 }
 let indice = myArray.indexOf(biggest);
-console.log(indice);
-
+//console.log(indice);
+return indice
+}
+console.log(biggestIndex([2, 3, 6, 7, 10, 1]));
 
