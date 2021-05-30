@@ -45,11 +45,15 @@ for (let index = 0; index < dezDays.length; index += 1) {
 
 createDaysMonth();
 
+function createButton(newbutton){
+  const buttonContainer = document.querySelector('.buttons-container');
+  const buttonSon = document.createElement('button');
+  const buttonSonid = 'btn-holiday';
+  buttonSon.id = buttonSonid; 
+  buttonContainer.appendChild(buttonSon);
+  buttonSon.innerHTML = newbutton;
 
+};
 
-
-//const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta')
-//const filhoElementoOndeVoceEsta = document.createElement('div');
-//filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
-//elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
+createButton('feriado');
 
