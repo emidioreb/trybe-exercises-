@@ -52,13 +52,12 @@
 //}
 
 // exercicio 7
-
-let init = 0;
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-for (let index = numbers.length-1; numbers.length > 0; index -=1) {
-  if(numbers[index] > init){
-    maior = numbers[index];
+let menor = numbers[0];
+for (let index = 0; index < numbers.length; index +=1) {
+  if(numbers[index] < menor){
+    menor = numbers[index];
   }   
 }
-console.log(maior); 
+console.log(menor); 
  
