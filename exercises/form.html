@@ -7,8 +7,8 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Cadastre seu Currículo</h1>
-  <form action="" method="GET">
+  <h1>Register your CV</h1>
+  <form id ="form"action="" method="GET">
     <fieldset>
       <label for="name">Name:</label>
       <input type="text" name="name" id="name" required maxlength="40">
@@ -16,22 +16,37 @@
       <input type="text" name="email" id="email" required maxlength="50">
       <label for="CPF">CPF:</label>
       <input type="text" name="CPF" id="CPF" required maxlength="11">
-      <label for="Endereço">Endereço:</label>
-      <input type="text" name="Endereço" id="Endereço" required maxlength="200">
-      <label for="Cidade">Cidade:</label>
-      <input type="text" name="Cidade" id="Cidade" required maxlength="28">
+      <label for="Adress">Adress:</label>
+      <input type="text" name="Adress" id="Adress" required maxlength="200">
+      <label for="City">City:</label>
+      <input type="text" name="City" id="City" required maxlength="28">
       <br>
-      <label for="state">Estado onde você mora</label>
+      <label for="state">State you live</label>
         <select name="state" id="state">
-          <option disabled selected value>Selecione estado</option>
+          <option disabled selected value>Select State</option>
         </select> 
-      <label for="casa">Casa</label>
-      <input type="radio" name="casa" id="casa" required>
-      <label for="apart">Apartamento</label>
-      <input type="radio" name="apart" id="apart" required>
-
+      <label for="house">
+        <input type="radio" name="home" id="house" required value="house" checked>House
+      </label>
+      <label for="apart">
+        <input type="radio" name="home" id="apart" required value="Apartment" >Apartment
+      </label>
     </fieldset>
+    <fieldset>
+      <p>Resume about you:</p>
+      <textarea name="aboutme" id="aboutme" cols="70" rows="12" maxlength="1000"></textarea>
+      <br>
+      <label for="position">Position:</label>
+      <input type="text" name="position" id="position" required maxlength="40">
+      <p>Description of your position:</p>
+      <textarea name="description" id="description" cols="70" rows="6" maxlength="500"></textarea>
+      <br>
+      <label for="date">start date:</label>
+      <input type="date" name="date" id="date" required maxlength="40">
+   </fieldset>
+   <button id='button' type="submit">Send !</button>
   </form>
+  <button id='clear'>Clear all</button>
   <script src="script.js"></script>
 </body>
 </html>
