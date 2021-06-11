@@ -4,29 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS only -->
   <title>Document</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="text-center">
+<body class="text-center mx-auto">
   <header>
     <h1 class="h1" >Register your CV</h1>
   </header>
   <form id ="form"action="" method="GET">
-    <fieldset >
-      <label for="name">Name:</label>
-      <input type="text" name="name" id="name" required maxlength="40">
-      <label for="email">Email:</label>
-      <input type="text" name="email" id="email" required maxlength="50">
-      <label for="CPF">CPF:</label>
-      <input type="text" name="CPF" id="CPF" required maxlength="11">
-      <label for="Adress">Adress:</label>
-      <input type="text" name="Adress" id="Adress" required maxlength="200">
-      <label for="City">City:</label>
-      <input type="text" name="City" id="City" required maxlength="28">
-      <br>
-      <label for="state">State you live</label>
+  <fieldset >
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Name</label>
+      <input type="name" class="form-control" id="inputName" required maxlength="40">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required maxlength="50">
+      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    </div>
+    <div class="mb-3">
+      <label for="inputCPF" class="form-label">CPF</label>
+      <input type="CPF" class="form-control" id="inputCPF" required maxlength="11">
+    </div>
+    <div class="mb-3">
+      <label for="inputAdress" class="form-label">What's your adress?</label>
+      <input type="adress" class="form-control" id="inputAdress" required maxlength="200">
+    </div>
+    <div class="mb-3">
+      <label for="inputCity" class="form-label">What's your city?</label>
+      <input type="city" class="form-control" id="inputCity" required maxlength="28">
+    </div>
+    <div class="mb-3">
+      <label for="state"></label>
         <select name="state" id="state">
           <option disabled selected value>Select State</option>
         </select> 
@@ -38,41 +48,33 @@
         <label class="form-check-label" for="home2">
           Apartment
         </label>
-
-    </fieldset>
-    <fieldset>
-      <p>Resume about you:</p>
-      <textarea name="aboutme" id="aboutme" cols="70" rows="12" maxlength="1000"></textarea>
-      <br>
-      <label for="position">Position:</label>
-      <input type="text" name="position" id="position" required maxlength="40">
-      <p>Description of your position:</p>
-      <textarea name="description" id="description" cols="70" rows="6" maxlength="500"></textarea>
-      <br>
+    </div>
+    <div class="mb-3">
+      <label for="inputResume" class="form-label">Resume about you</label>
+      <textarea type="resume" class="form-control" id="inputResume" cols="70" rows="6" maxlength="1000"></textarea>
+    </div>
+    <div class="mb-3">
+      <label for="inputPosition" class="form-label">What's your Position</label>
+      <input type="position" class="form-control" id="inputPosition" required maxlength="40">
+    </div>
+    <div class="mb-3">
+      <label for="inputDescribePosition" class="form-label">Describe about your Position</label>
+      <textarea type="describe" class="form-control" id="inputDescribePosition" cols="70" rows="6" maxlength="500"></textarea>
+    </div>
+    <div class="mb-3">
       <label for="date">start date:</label>
       <input type="date" name="date" id="date" required maxlength="40">
-   </fieldset>
-   <button id='button' type="submit">Send !</button>
+    </div>
+  </fieldset>
+  <div class="mb-3 form-check ">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+    <button id = 'clear' class="btn btn-warning">Clear all</button>
+   
   </form>
-  <button id='clear'>Clear all</button>
-  <form>
-    <!-- <fieldset>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-  </fieldset> -->
+
   <script src="script.js"></script>
 </body>
 </html>
