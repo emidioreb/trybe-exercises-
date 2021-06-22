@@ -35,14 +35,14 @@ const order = {
 };
 
 const customerInfo = (order) => {
-  const deliveryP = order.order.delivery.deliveryPerson;
-  console.log(`${deliveryP}`);
+  console.log(`Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, telefone: ${order.phoneNumber}, ${order.address.street} ,N°${order.address.number} ,AP${order.address.apartment}.`);
 }
 customerInfo(order);
 
 const orderModifier = (order) => {
-  // Adicione abaixo as informações necessárias.
-
+  const newConsumer = order.name = 'Luiz Silva';
+  const newPrice = order.payment.total = 50;
+ console.log(`Olá ${newConsumer}, o total do seu pedido de  ${newPrice}`);  
 }
 
 orderModifier(order);
