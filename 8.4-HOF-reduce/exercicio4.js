@@ -62,13 +62,27 @@ const books = [
     releaseYear: 1928,
   },
 ];
-/* 2 - Crie uma string com os nomes de todas as pessoas autoras. */
-const expectedResult = "George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.";
 
-function reduceNames() {
-  return books.map(book => book.author.name)
-  .reduce((previousValue,currentValue) => previousValue + ', ' + currentValue)+'.'
+const expectedResult = {
+  id: 1,
+  name: 'As Crônicas de Gelo e Fogo',
+  genre: 'Fantasia',
+  author: {
+    name: 'George R. R. Martin',
+    birthYear: 1948,
+  },
+  releaseYear: 1991,
+};
+/* 4 - Encontre o livro com o maior nome. */
+/* referencia: https://www.notion.so/Solu-o-8-4-d890445dacdd44a38ddf717f8d916018*/
+function longestNamedBook() {
+  return books.reduce((previousValue,currentValue) => {
+    if (currentValue.name.length > previousValue.name.length){
+      return currentValue;
+    }
+    return previousValue
+  })
 }
-console.log(reduceNames());
+console.log(longestNamedBook());
+assert.deepStrictEqual(longestNamedBook(), expectedResult);
 
-assert.strictEqual(reduceNames(), expectedResult);
