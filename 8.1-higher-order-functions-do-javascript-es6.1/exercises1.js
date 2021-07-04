@@ -1,7 +1,7 @@
 
 const transformation = (nome) => {
   const email = nome.toLowerCase().split(' ').join('_');
-  return `Nome completo:${nome}, email: ${email}@trybe.com`
+  return {nome, email: `${email}@trybe.com`}
 }
 const newEmployees = (callBack) => {
   const employees = {
