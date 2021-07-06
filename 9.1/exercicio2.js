@@ -28,4 +28,4 @@ const jupiter = {
 console.log(planetDistanceFromSun(mars)); // A
 setTimeout(() => console.log(planetDistanceFromSun(venus)), 3000); // B
 setTimeout(() => console.log(planetDistanceFromSun(jupiter)), 2000); // C
-/* ORDEM DE FINALIZAÇÃO: A,C e B. */
+/* ORDEM DE FINALIZAÇÃO : A,C e B. */
