@@ -8,7 +8,7 @@
       );
     }
     // Criação do array com as atividades diárias
-    const tarefas = ['Acordar', 'Tomar café', 'Escovar os dentes', 'Ir trabalhar'];
+    const tarefas = ['Acordar', 'estudar', 'Ler', 'inglês'];
 
     class App extends React.Component { // Criação do componente APP
       render() { // colocar esse render é obrigatório
@@ -18,4 +18,4 @@
       }
     }
 
-    export default App;
+    export default App; // Exportar o componente App
